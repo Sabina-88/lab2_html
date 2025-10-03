@@ -1,8 +1,5 @@
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
-}
+/* style-flex.css (оновлений) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: Arial, sans-serif;
@@ -12,15 +9,16 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* важливо: контейнер тягнеться на висоту вікна */
 }
 
-.block { 
-  padding: 10px; 
+/* блоки загальні */
+.block {
+  padding: 10px;
   overflow-wrap: break-word;
 }
 
-/* верхній блок */
+/* header */
 .b1 {
   background: #d299ef;
   display: flex;
@@ -28,14 +26,11 @@ body {
   align-items: center;
   height: 120px;
   padding: 0 20px;
+  flex: 0 0 auto;
 }
 
-.menu a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
+/* меню */
+.menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
 .menu a:hover { text-decoration: underline; }
 
 .logo-box {
@@ -47,10 +42,13 @@ body {
   font-size: 24px;
 }
 
-/* середня частина */
+/* середня частина (головна область) */
 .main-content {
-  flex: 1;
+  flex: 1 1 auto;      /* займає весь простір між header та footer */
   display: flex;
+  align-items: stretch; /* щоб колонки тяглися однаковою висотою */
+  gap: 10px;
+  padding: 10px;
 }
 
 /* ліва колонка */
@@ -59,42 +57,41 @@ body {
   flex-direction: column;
   width: 180px;
 }
-.b2 { background: #afe5f6; flex: 1; }
-.b5 { background: #f7a8e8; flex: 1; }
+.b2 { background: #afe5f6; flex: 1; padding: 10px; }
+.b5 { background: #f7a8e8; flex: 1; padding: 10px; }
 
 /* центр */
-.b3 { 
-  flex: 1; 
-  background: #ffffff; 
-  padding: 15px; 
+.b3 {
+  flex: 1 1 auto;      /* займає весь доступний простір */
+  background: #ffffff;
+  padding: 15px;
+  overflow: auto;
 }
-.b3 h2 { margin-top: 25px; margin-bottom: 10px; }
-.b3 p { margin-bottom: 15px; }
-.b3 ol, .b3 ul { margin-left: 20px; margin-bottom: 15px; }
 
 /* права колонка */
-.b4 { 
-  width: 220px; 
-  background: #afe5f6; 
-  padding: 10px; 
+.b4 {
+  width: 220px;
+  background: #afe5f6;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  /* не задаємо фіксованої висоти — колонка тягнеться в висоту завдяки align-items:stretch в main-content */
 }
-.b4 ul, .b4 ol { margin: 0; padding-left: 20px; list-style-type: inside; }
 
 /* підвал */
 .b6 {
   background: #d299ef;
-  height: 80px;
-  position: relative;
+  flex: 0 0 80px; /* фіксована висота футера */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
+  position: relative;
 }
 
+/* y-box — НЕ абсолютний, щоб не накладався на інші блоки */
 .y-box {
-  position: absolute;
-  left: 20px;
+  display: inline-block;
   background: #f3e1fc;
   color: #000;
   padding: 15px 40px;
@@ -103,16 +100,6 @@ body {
   font-size: 24px;
 }
 
-img {
-  display: block;
-  margin: 20px auto;
-  height: auto;
-  max-width: 100%;
-}
-.map-img {
-  max-width: 1500px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
+/* зображення */
+img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
+.map-img { max-width: 1500px; width: 100%; height: auto; display: block; margin: 20px auto; }
