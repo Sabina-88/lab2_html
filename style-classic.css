@@ -2,61 +2,50 @@
 html, body { height: 100%; }
 body { font-family: Arial, sans-serif; background: #fff; }
 
-/* загальна обгортка */
-.container { width: 100%; min-height: 100vh; }
+.container { width:100%; min-height:100vh; }
 
-/* верх */
+/* header */
 .b1 {
-  background: #d299ef;
-  height: 120px;
-  padding: 0 20px;
-  overflow: hidden;
+  background:#d299ef;
+  height:120px;
+  padding:0 20px;
+  overflow:hidden;
 }
-.b1 nav { float: left; margin-top: 40px; }
-.menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
-.logo-box { float: right; margin-top: 20px; background: #f3e1fc; padding: 15px 40px; border: 2px solid #000; font-size: 24px; font-weight: bold; }
+.b1 nav { float:left; margin-top:40px; }
+.logo-box { float:right; margin-top:20px; background:#f3e1fc; padding:15px 40px; border:2px solid #000; font-size:24px; font-weight:bold; }
 
-/* clearfix для основної області */
-.main-wrap::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* clearfix */
+.main-wrap::after { content:""; display:table; clear:both; }
 
-/* ліва колонка */
-.left { float: left; width: 180px; }
-.b2 { background: #afe5f6; padding: 20px; min-height: 200px; }
-.b5 { background: #f7a8e8; padding: 20px; margin-top: 10px; min-height: 200px; }
+/* ліво */
+.left { float:left; width:180px; }
+.b2 { background:#afe5f6; padding:20px; min-height:200px; box-sizing:border-box; }
+.b5 { background:#f7a8e8; padding:20px; margin-top:10px; min-height:200px; box-sizing:border-box; }
 
-/* права колонка */
-.b4 { float: right; width: 220px; background: #afe5f6; padding: 20px; min-height: calc(100vh - 120px - 100px); box-sizing: border-box; }
+.b4 { float:right; width:220px; background:#f3d6c9; padding:20px; min-height: calc(100vh - 120px - 100px); box-sizing:border-box; }
 
 /* центр */
-.b3 { margin: 0 240px 0 200px; background: #fff; padding: 20px; min-height: 200px; }
+.b3 { margin: 0 240px 0 200px; background:#fff; padding:20px; min-height:200px; box-sizing:border-box; }
 
-/* підвал */
+/* футер */
 .b6 {
-  clear: both; 
-  background: #d299ef;
-  height: 100px;
-  position: relative;
-  text-align: left;
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
+  clear:both;
+  background:#d299ef;
+  height:100px;
+  padding-left:30px;
+  display:flex;
+  align-items:center;
+  box-sizing:border-box;
 }
 
 .y-box {
-  display: inline-block;
-  background: #f3e1fc;
-  padding: 15px 40px;
-  border: 2px solid #000;
-  font-size: 24px;
-  font-weight: bold;
+  background:#f3e1fc;
+  padding:12px 30px;
+  border:2px solid #000;
+  font-size:20px;
+  font-weight:bold;
 }
 
-/* Списки та зображення */
-.b4 ul { margin: 0; padding-left: 18px; }
-img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
-.map-img { max-width: 100%; width: 100%; height: auto; display: block; margin: 20px 0; }
-
+/* списки/зображення */
+.b4 ul { margin:0; padding-left:18px; }
+img { display:block; max-width:100%; height:auto; margin:20px 0; }
