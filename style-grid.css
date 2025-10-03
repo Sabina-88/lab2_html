@@ -16,7 +16,7 @@ body {
   grid-template-areas:
     "b1 b1 b1"
     "left main b4"
-    "b6 b6 b4";  /* ⚡ підвал під лівим+центром, а b4 цілий */
+    "b6 b6 b4";
   min-height: 100vh;
 }
 
@@ -112,4 +112,5 @@ img {
   height: auto;
   display: block;
   margin: 20px auto;
+
 }
