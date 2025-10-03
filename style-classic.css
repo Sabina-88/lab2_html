@@ -1,0 +1,105 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* верхній блок */
+.b1 {
+  background: #d299ef;
+  height: 120px;
+  padding: 0 20px;
+}
+.b1 nav {
+  float: left;
+  margin-top: 40px;
+}
+.menu a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.menu a:hover { text-decoration: underline; }
+
+.logo-box {
+  float: right;
+  margin-top: 20px;
+  background: #f3e1fc;
+  padding: 15px 40px;
+  border: 2px solid #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ліва колонка */
+.left {
+  float: left;
+  width: 180px;
+}
+.b2 { background: #afe5f6; padding: 10px; }
+.b5 { background: #f7a8e8; padding: 10px; }
+
+/* права колонка */
+.b4 {
+  float: right;
+  width: 220px;
+  background: #afe5f6;
+  padding: 10px;
+  min-height: calc(100vh - 120px - 80px); /* ⚡ щоб тягнулася */
+}
+
+/* центр */
+.b3 {
+  margin: 0 220px 0 180px;
+  background: #fff;
+  padding: 15px;
+}
+.b3 h2 { margin-top: 25px; margin-bottom: 10px; }
+.b3 p { margin-bottom: 15px; }
+.b3 ol, .b3 ul { margin-left: 20px; margin-bottom: 15px; }
+
+/* підвал */
+.b6 {
+  clear: left; /* ⚡ футер не під правою колонкою */
+  background: #d299ef;
+  height: 80px;
+  position: relative;
+  text-align: center;
+  line-height: 80px;
+}
+
+.y-box {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: #f3e1fc;
+  padding: 15px 40px;
+  border: 2px solid #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  height: auto;
+  max-width: 100%;
+}
+.map-img {
+  max-width: 1500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
