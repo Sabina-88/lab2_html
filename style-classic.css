@@ -10,7 +10,7 @@ body { font-family: Arial, sans-serif; background: #fff; }
   background: #d299ef;
   height: 120px;
   padding: 0 20px;
-  overflow: hidden; /* щоб меню і логотип не виривалися */
+  overflow: hidden;
 }
 .b1 nav { float: left; margin-top: 40px; }
 .menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
@@ -45,7 +45,6 @@ body { font-family: Arial, sans-serif; background: #fff; }
   padding: 0 20px;
 }
 
-/* y-box — НЕ абсолютний у класик */
 .y-box {
   display: inline-block;
   background: #f3e1fc;
@@ -60,3 +59,4 @@ body { font-family: Arial, sans-serif; background: #fff; }
 
 img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
 .map-img { max-width: 1500px; width: 100%; height: auto; display: block; margin: 20px auto; }
+
