@@ -30,8 +30,6 @@ body { font-family: Arial, sans-serif; background: #fff; }
 
 /* права колонка */
 .b4 { float: right; width: 220px; background: #afe5f6; padding: 20px; min-height: calc(100vh - 120px - 100px); box-sizing: border-box; }
-/* min-height підраховано: висота вікна - header(120) - приблизний футер(100) */
-/* Це дозволяє правій колонці тягнутися по висоті і не ставати маленькою */
 
 /* центр */
 .b3 { margin: 0 240px 0 200px; background: #fff; padding: 20px; min-height: 200px; }
@@ -61,3 +59,4 @@ body { font-family: Arial, sans-serif; background: #fff; }
 .b4 ul { margin: 0; padding-left: 18px; }
 img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
 .map-img { max-width: 100%; width: 100%; height: auto; display: block; margin: 20px 0; }
+
