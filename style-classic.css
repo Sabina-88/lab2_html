@@ -35,7 +35,7 @@ body { font-family: Arial, sans-serif; background: #fff; }
 
 /* підвал */
 .b6 {
-  clear: both; /* важливо: футер під плавальними колонками */
+  clear: both;
   background: #d299ef;
   height: 80px;
   position: relative;
@@ -58,5 +58,3 @@ body { font-family: Arial, sans-serif; background: #fff; }
 
 img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
 .map-img { max-width: 1500px; width: 100%; height: auto; display: block; margin: 20px auto; }
-
-
