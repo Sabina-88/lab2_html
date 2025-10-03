@@ -2,7 +2,8 @@
 html, body { height: 100%; }
 body { font-family: Arial, sans-serif; background: #fff; }
 
-.container { width:100%; min-height:100vh; }
+/* загальна обгортка */
+.container { width: 100%; min-height: 100vh; }
 
 /* header */
 .b1 {
@@ -12,24 +13,49 @@ body { font-family: Arial, sans-serif; background: #fff; }
   overflow:hidden;
 }
 .b1 nav { float:left; margin-top:40px; }
+.menu a { margin-right:15px; text-decoration:none; color:#000; font-weight:bold; }
 .logo-box { float:right; margin-top:20px; background:#f3e1fc; padding:15px 40px; border:2px solid #000; font-size:24px; font-weight:bold; }
 
-/* clearfix */
-.main-wrap::after { content:""; display:table; clear:both; }
+/* Головна область */
+.main-wrap {
+  position: relative;
+  padding-right: 240px;
+  min-height: 300px;
+}
 
-/* ліво */
-.left { float:left; width:180px; }
+/* ліва колонка (плаває ліворуч) */
+.left { float: left; width: 180px; }
 .b2 { background:#afe5f6; padding:20px; min-height:200px; box-sizing:border-box; }
 .b5 { background:#f7a8e8; padding:20px; margin-top:10px; min-height:200px; box-sizing:border-box; }
 
-.b4 { float:right; width:220px; background:#f3d6c9; padding:20px; min-height: calc(100vh - 120px - 100px); box-sizing:border-box; }
+/* центральний блок*/
+.b3 {
+  margin: 0 240px 0 200px;
+  background:#fff;
+  padding:20px;
+  min-height:200px;
+  box-sizing:border-box;
+}
 
-/* центр */
-.b3 { margin: 0 240px 0 200px; background:#fff; padding:20px; min-height:200px; box-sizing:border-box; }
+/* Права колонка */
+.b4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  background: #f3d6c9; /* або інший колір */
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 200px;
+  overflow: auto;
+}
 
-/* футер */
+/* Списки у правій колонці */
+.b4 ul { margin: 0; padding-left: 18px; }
+
+/* підвал */
 .b6 {
-  clear:both;
+  clear: both;
   background:#d299ef;
   height:100px;
   padding-left:30px;
@@ -38,6 +64,7 @@ body { font-family: Arial, sans-serif; background: #fff; }
   box-sizing:border-box;
 }
 
+/* кнопка в футері */
 .y-box {
   background:#f3e1fc;
   padding:12px 30px;
@@ -46,6 +73,6 @@ body { font-family: Arial, sans-serif; background: #fff; }
   font-weight:bold;
 }
 
-/* списки/зображення */
-.b4 ul { margin:0; padding-left:18px; }
+/* зображення та адаптивність */
 img { display:block; max-width:100%; height:auto; margin:20px 0; }
+.map-img { width:100%; height:auto; display:block; margin:20px 0; }
