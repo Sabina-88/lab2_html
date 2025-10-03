@@ -1,10 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html, body { height: 100%; }
-body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-}
+body { font-family: Arial, sans-serif; background: #fff; }
 
 .container {
   display: flex;
@@ -12,13 +8,9 @@ body {
   min-height: 100vh;
 }
 
-/* загальні блоки */
-.block {
-  padding: 10px;
-  overflow-wrap: break-word;
-}
+/* загальні */
+.block { padding: 0; box-sizing: border-box; }
 
-/* header */
 .b1 {
   background: #d299ef;
   display: flex;
@@ -29,80 +21,66 @@ body {
   flex: 0 0 auto;
 }
 
-/* меню */
+/* меню/логотип */
 .menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
-.menu a:hover { text-decoration: underline; }
-
-.logo-box {
-  background: #f3e1fc;
-  color: #000;
-  padding: 15px 40px;
-  border: 2px solid #000;
-  font-weight: bold;
-  font-size: 24px;
-}
+.logo-box { background: #f3e1fc; padding: 15px 40px; border: 2px solid #000; font-weight: bold; font-size: 24px; }
 
 .main-content {
-  flex: 1 1 auto;      
+  flex: 1 1 auto;
   display: flex;
   align-items: stretch;
   gap: 0;
   padding: 0;
 }
 
-/* ліва колонка */
-.left {
-  display: flex;
-  flex-direction: column;
-  width: 180px;
-}
-.b2 { background: #afe5f6; flex: 1; padding: 20px; }
-.b5 { background: #f7a8e8; flex: 1; padding: 20px; }
+/* ліва */
+.left { width: 180px; display:flex; flex-direction:column; }
+.b2 { background:#afe5f6; padding:20px; flex:1; }
+.b5 { background:#f7a8e8; padding:20px; flex:1; }
 
-/* центр */
 .b3 {
-  flex: 1 1 auto;      
-  background: #ffffff;
+  flex: 1 1 auto;
+  background: #fff;
   padding: 20px;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  min-height: calc(100vh - 120px - 100px);
+  box-sizing: border-box;
   overflow: auto;
-  border-left: 2px solid #ddd;
-  border-right: 2px solid #ddd;
 }
 
-/* права колонка */
+/* права */
 .b4 {
   width: 220px;
-  background: #afe5f6;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-/* Права секція */
-.b4 ul { margin: 0; padding-left: 18px; }
-
-/* підвал */
-.b6 {
-  background: #d299ef;
-  flex: 0 0 100px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 30px;
+  background:#f3d6c9;
+  padding:20px;
   box-sizing: border-box;
+  display:flex;
+  flex-direction:column;
 }
 
+/* списки у правій колонці */
+.b4 ul { margin:0; padding-left:18px; }
+
+
+.b6 {
+  background:#d299ef;
+  flex: 0 0 100px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left:30px;
+  box-sizing:border-box;
+}
+
+/* y-box */
 .y-box {
-  display: inline-block;
-  background: #f3e1fc;
-  color: #000;
-  padding: 15px 40px;
-  border: 2px solid #000;
-  font-weight: bold;
-  font-size: 24px;
+  background:#f3e1fc;
+  padding:12px 30px;
+  border:2px solid #000;
+  font-size:20px;
+  font-weight:bold;
 }
 
-/* зображення в центрі */
-img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
-.map-img { max-width: 100%; width: 100%; height: auto; display: block; margin: 20px 0; }
+/* зображення */
+img { display:block; max-width:100%; height:auto; margin:20px 0; }
