@@ -43,9 +43,9 @@ body {
 
 /* середня частина (головна область) */
 .main-content {
-  flex: 1 1 auto;
+  flex: 1 1 auto;      /* займає весь простір між header та footer */
   display: flex;
-  align-items: stretch;
+  align-items: stretch; /* колонки тягнуться однаковою висотою */
   gap: 10px;
   padding: 10px;
 }
@@ -79,7 +79,7 @@ body {
 /* підвал */
 .b6 {
   background: #d299ef;
-  flex: 0 0 80px;
+  flex: 0 0 80px; /* фіксована висота футера */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,4 +100,3 @@ body {
 /* зображення */
 img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
 .map-img { max-width: 1500px; width: 100%; height: auto; display: block; margin: 20px auto; }
-
