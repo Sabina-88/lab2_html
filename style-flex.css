@@ -1,5 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body { height: 100%; }
 body {
   font-family: Arial, sans-serif;
   background: #fff;
@@ -11,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-/* блоки загальні */
+/* загальні блоки */
 .block {
   padding: 10px;
   overflow-wrap: break-word;
@@ -41,13 +42,12 @@ body {
   font-size: 24px;
 }
 
-/* середня частина (головна область) */
 .main-content {
-  flex: 1 1 auto;      /* займає весь простір між header та footer */
+  flex: 1 1 auto;      
   display: flex;
-  align-items: stretch; /* колонки тягнуться однаковою висотою */
-  gap: 10px;
-  padding: 10px;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
 }
 
 /* ліва колонка */
@@ -56,35 +56,41 @@ body {
   flex-direction: column;
   width: 180px;
 }
-.b2 { background: #afe5f6; flex: 1; padding: 10px; }
-.b5 { background: #f7a8e8; flex: 1; padding: 10px; }
+.b2 { background: #afe5f6; flex: 1; padding: 20px; }
+.b5 { background: #f7a8e8; flex: 1; padding: 20px; }
 
 /* центр */
 .b3 {
-  flex: 1 1 auto;
+  flex: 1 1 auto;      
   background: #ffffff;
-  padding: 15px;
+  padding: 20px;
   overflow: auto;
+  border-left: 2px solid #ddd;
+  border-right: 2px solid #ddd;
 }
 
 /* права колонка */
 .b4 {
   width: 220px;
   background: #afe5f6;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
+
+/* Права секція */
+.b4 ul { margin: 0; padding-left: 18px; }
 
 /* підвал */
 .b6 {
   background: #d299ef;
-  flex: 0 0 80px; /* фіксована висота футера */
+  flex: 0 0 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  position: relative;
+  justify-content: flex-start;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .y-box {
@@ -97,6 +103,6 @@ body {
   font-size: 24px;
 }
 
-/* зображення */
+/* зображення в центрі */
 img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
-.map-img { max-width: 1500px; width: 100%; height: auto; display: block; margin: 20px auto; }
+.map-img { max-width: 100%; width: 100%; height: auto; display: block; margin: 20px 0; }
