@@ -1,4 +1,5 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
 body { font-family: Arial, sans-serif; background: #fff; }
 
 /* загальна обгортка */
@@ -15,7 +16,7 @@ body { font-family: Arial, sans-serif; background: #fff; }
 .menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
 .logo-box { float: right; margin-top: 20px; background: #f3e1fc; padding: 15px 40px; border: 2px solid #000; font-size: 24px; font-weight: bold; }
 
-/* clearfix клас для головної області */
+/* clearfix для основної області */
 .main-wrap::after {
   content: "";
   display: table;
@@ -24,24 +25,27 @@ body { font-family: Arial, sans-serif; background: #fff; }
 
 /* ліва колонка */
 .left { float: left; width: 180px; }
-.b2 { background: #afe5f6; padding: 10px; }
-.b5 { background: #f7a8e8; padding: 10px; margin-top: 10px; }
+.b2 { background: #afe5f6; padding: 20px; min-height: 200px; }
+.b5 { background: #f7a8e8; padding: 20px; margin-top: 10px; min-height: 200px; }
 
 /* права колонка */
-.b4 { float: right; width: 220px; background: #afe5f6; padding: 10px; }
+.b4 { float: right; width: 220px; background: #afe5f6; padding: 20px; min-height: calc(100vh - 120px - 100px); box-sizing: border-box; }
+/* min-height підраховано: висота вікна - header(120) - приблизний футер(100) */
+/* Це дозволяє правій колонці тягнутися по висоті і не ставати маленькою */
 
 /* центр */
-.b3 { margin: 0 240px 0 200px; background: #fff; padding: 15px; min-height: 200px; }
+.b3 { margin: 0 240px 0 200px; background: #fff; padding: 20px; min-height: 200px; }
 
 /* підвал */
 .b6 {
-  clear: both;
+  clear: both; 
   background: #d299ef;
-  height: 80px;
+  height: 100px;
   position: relative;
-  text-align: center;
-  line-height: 80px;
-  padding: 0 20px;
+  text-align: left;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .y-box {
@@ -51,10 +55,9 @@ body { font-family: Arial, sans-serif; background: #fff; }
   border: 2px solid #000;
   font-size: 24px;
   font-weight: bold;
-  position: relative;
-  left: 0;
-  top: 0;
 }
 
+/* Списки та зображення */
+.b4 ul { margin: 0; padding-left: 18px; }
 img { display: block; margin: 20px auto; height: auto; max-width: 100%; }
-.map-img { max-width: 1500px; width: 100%; height: auto; display: block; margin: 20px auto; }
+.map-img { max-width: 100%; width: 100%; height: auto; display: block; margin: 20px 0; }
