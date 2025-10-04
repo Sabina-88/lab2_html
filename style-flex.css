@@ -8,9 +8,6 @@ body { font-family: Arial, sans-serif; background: #fff; }
   min-height: 100vh;
 }
 
-/* Загальні блоки */
-.block { padding: 0; box-sizing: border-box; }
-
 /* Верхній блок */
 .b1 {
   background: #d299ef;
@@ -19,13 +16,17 @@ body { font-family: Arial, sans-serif; background: #fff; }
   align-items: center;
   height: 120px;
   padding: 0 20px;
+  flex: 0 0 auto;
 }
+
 .menu a {
   margin-right: 15px;
   text-decoration: none;
   color: #000;
   font-weight: bold;
 }
+.menu a:hover { text-decoration: underline; }
+
 .logo-box {
   background: #f3e1fc;
   padding: 15px 40px;
@@ -38,6 +39,8 @@ body { font-family: Arial, sans-serif; background: #fff; }
 .main-content {
   flex: 1 1 auto;
   display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 200px); /* 120 header + 80 footer */
 }
 
 /* Ліва колонка */
@@ -49,34 +52,43 @@ body { font-family: Arial, sans-serif; background: #fff; }
 .b2 { background: #afe5f6; padding: 20px; flex: 1; }
 .b5 { background: #f7a8e8; padding: 20px; flex: 1; }
 
-/* Центральна частина */
+/* Центральний блок */
 .b3 {
   flex: 1 1 auto;
   background: #fff;
   padding: 20px;
+  min-height: calc(100vh - 200px);
   box-sizing: border-box;
+  overflow: auto;
+  border: none; /* прибираємо чорні лінії */
 }
 
 /* Права колонка */
 .b4 {
   width: 220px;
-  background: #afe5f6; /* як у GRID */
+  background: #afe5f6; /* як у Grid */
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
+
+/* Списки у правій колонці */
 .b4 ul { margin: 0; padding-left: 18px; }
 
 /* Підвал */
 .b6 {
   background: #d299ef;
-  height: 80px;
+  flex: 0 0 80px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 30px;
+  box-sizing: border-box;
 }
+
+/* Кнопка в підвалі */
 .y-box {
   background: #f3e1fc;
   padding: 12px 30px;
@@ -86,4 +98,15 @@ body { font-family: Arial, sans-serif; background: #fff; }
 }
 
 /* Зображення */
-img { display: block; max-width: 100%; height: auto; margin: 20px 0; }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+.map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
