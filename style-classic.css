@@ -2,39 +2,37 @@
 html, body { height: 100%; }
 body { font-family: Arial, sans-serif; background: #fff; }
 
-/* загальна обгортка */
 .container { width: 100%; min-height: 100vh; }
 
-/* header */
+/* Верхній блок */
 .b1 {
-  background:#d299ef;
-  height:120px;
-  padding:0 20px;
-  overflow:hidden;
+  background: #d299ef;
+  height: 120px;
+  padding: 0 20px;
+  overflow: hidden;
 }
-.b1 nav { float:left; margin-top:40px; }
-.menu a { margin-right:15px; text-decoration:none; color:#000; font-weight:bold; }
-.logo-box { float:right; margin-top:20px; background:#f3e1fc; padding:15px 40px; border:2px solid #000; font-size:24px; font-weight:bold; }
+.b1 nav { float: left; margin-top: 40px; }
+.menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
+.logo-box { float: right; margin-top: 20px; background: #f3e1fc; padding: 15px 40px; border: 2px solid #000; font-size: 24px; font-weight: bold; }
 
-/* Головна область */
+/* Основна область */
 .main-wrap {
   position: relative;
   padding-right: 240px;
-  min-height: 300px;
+  min-height: 400px;
 }
 
-/* ліва колонка (плаває ліворуч) */
+/* Ліва колонка */
 .left { float: left; width: 180px; }
-.b2 { background:#afe5f6; padding:20px; min-height:200px; box-sizing:border-box; }
-.b5 { background:#f7a8e8; padding:20px; margin-top:10px; min-height:200px; box-sizing:border-box; }
+.b2 { background: #afe5f6; padding: 20px; box-sizing: border-box; }
+.b5 { background: #f7a8e8; padding: 20px; box-sizing: border-box; }
 
-/* центральний блок*/
+/* Центральний блок */
 .b3 {
   margin: 0 240px 0 200px;
-  background:#fff;
-  padding:20px;
-  min-height:200px;
-  box-sizing:border-box;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Права колонка */
@@ -43,36 +41,30 @@ body { font-family: Arial, sans-serif; background: #fff; }
   top: 0;
   right: 0;
   width: 220px;
-  background: #f3d6c9; /* або інший колір */
+  background: #afe5f6; /* як у GRID */
   padding: 20px;
   box-sizing: border-box;
-  min-height: 200px;
-  overflow: auto;
+  height: 100%;
 }
-
-/* Списки у правій колонці */
 .b4 ul { margin: 0; padding-left: 18px; }
 
-/* підвал */
+/* Підвал */
 .b6 {
   clear: both;
-  background:#d299ef;
-  height:100px;
-  padding-left:30px;
-  display:flex;
-  align-items:center;
-  box-sizing:border-box;
+  background: #d299ef;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
 }
-
-/* кнопка в футері */
 .y-box {
-  background:#f3e1fc;
-  padding:12px 30px;
-  border:2px solid #000;
-  font-size:20px;
-  font-weight:bold;
+  background: #f3e1fc;
+  padding: 12px 30px;
+  border: 2px solid #000;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-/* зображення та адаптивність */
-img { display:block; max-width:100%; height:auto; margin:20px 0; }
-.map-img { width:100%; height:auto; display:block; margin:20px 0; }
+/* Зображення */
+img { display: block; max-width: 100%; height: auto; margin: 20px 0; }
+.map-img { width: 100%; height: auto; display: block; margin: 20px 0; }
