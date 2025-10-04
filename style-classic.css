@@ -13,25 +13,36 @@ body { font-family: Arial, sans-serif; background: #fff; }
 }
 .b1 nav { float: left; margin-top: 40px; }
 .menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
-.logo-box { float: right; margin-top: 20px; background: #f3e1fc; padding: 15px 40px; border: 2px solid #000; font-size: 24px; font-weight: bold; }
+.menu a:hover { text-decoration: underline; }
 
-/* Основна область */
+.logo-box {
+  float: right;
+  margin-top: 20px;
+  background: #f3e1fc;
+  padding: 15px 40px;
+  border: 2px solid #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Основна частина */
 .main-wrap {
   position: relative;
   padding-right: 240px;
-  min-height: 400px;
+  min-height: calc(100vh - 200px); /* щоб права колонка тягнулась */
 }
 
 /* Ліва колонка */
 .left { float: left; width: 180px; }
-.b2 { background: #afe5f6; padding: 20px; box-sizing: border-box; }
-.b5 { background: #f7a8e8; padding: 20px; box-sizing: border-box; }
+.b2 { background: #afe5f6; padding: 20px; min-height: 200px; box-sizing: border-box; }
+.b5 { background: #f7a8e8; padding: 20px; margin-top: 10px; min-height: 200px; box-sizing: border-box; }
 
 /* Центральний блок */
 .b3 {
   margin: 0 240px 0 200px;
   background: #fff;
   padding: 20px;
+  min-height: 200px;
   box-sizing: border-box;
 }
 
@@ -40,12 +51,15 @@ body { font-family: Arial, sans-serif; background: #fff; }
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0; /* щоб тягнулась донизу */
   width: 220px;
-  background: #afe5f6; /* як у GRID */
+  background: #afe5f6; /* колір як у Grid */
   padding: 20px;
   box-sizing: border-box;
-  height: 100%;
+  overflow: auto;
 }
+
+/* Списки */
 .b4 ul { margin: 0; padding-left: 18px; }
 
 /* Підвал */
@@ -53,10 +67,13 @@ body { font-family: Arial, sans-serif; background: #fff; }
   clear: both;
   background: #d299ef;
   height: 80px;
+  padding-left: 30px;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  box-sizing: border-box;
 }
+
+/* Кнопка */
 .y-box {
   background: #f3e1fc;
   padding: 12px 30px;
@@ -66,5 +83,15 @@ body { font-family: Arial, sans-serif; background: #fff; }
 }
 
 /* Зображення */
-img { display: block; max-width: 100%; height: auto; margin: 20px 0; }
-.map-img { width: 100%; height: auto; display: block; margin: 20px 0; }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+.map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
