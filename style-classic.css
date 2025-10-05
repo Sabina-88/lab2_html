@@ -32,10 +32,16 @@ body { font-family: Arial, sans-serif; background: #fff; }
 }
 
 /* Ліва колонка */
-.left { float: left; width: 180px; }
-.b2, .b5 { padding: 15px; box-sizing: border-box; }
-.b2 { background: #afe5f6; min-height: 200px; }
-.b5 { background: #f7a8e8; min-height: 200px; }
+.left { 
+  float: left; 
+  width: 180px; 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.b2, .b5 { padding: 15px; flex: 1; }
+.b2 { background: #afe5f6; }
+.b5 { background: #f7a8e8; }
 
 /* Центральний блок */
 .b3 {
@@ -50,11 +56,12 @@ body { font-family: Arial, sans-serif; background: #fff; }
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; /* ← суцільна висота */
   width: 220px;
   background: #afe5f6;
   padding: 15px;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 .b4 ul { margin: 0; padding-left: 18px; }
 
