@@ -9,6 +9,7 @@ body { font-family: Arial, sans-serif; background: #fff; }
   background: #d299ef;
   height: 120px;
   padding: 0 20px;
+  overflow: hidden;
 }
 .b1 nav { float: left; margin-top: 40px; }
 .menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
@@ -27,21 +28,30 @@ body { font-family: Arial, sans-serif; background: #fff; }
 /* Основна частина */
 .main-wrap {
   position: relative;
-  padding-right: 220px;
-  min-height: calc(100vh - 200px);
+  padding-right: 220px; /* місце для правої колонки */
+  min-height: calc(100vh - 200px); /* 120 + 80 */
 }
 
 /* Ліва колонка */
-.left { 
-  float: left; 
-  width: 180px; 
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.b2, .b5 { padding: 15px; flex: 1; }
-.b2 { background: #afe5f6; }
-.b5 { background: #f7a8e8; }
+
+.left .b2,
+.left .b5 {
+  box-sizing: border-box;
+  height: 50%;
+  padding: 15px;
+  overflow: auto;
+}
+.left .b2 { background: #afe5f6; }
+.left .b5 { background: #f7a8e8; }
 
 /* Центральний блок */
 .b3 {
@@ -49,6 +59,8 @@ body { font-family: Arial, sans-serif; background: #fff; }
   background: #fff;
   padding: 20px;
   box-sizing: border-box;
+  min-height: 100%; /* займе висоту контенту */
+  overflow: auto;
 }
 
 /* Права колонка */
@@ -56,12 +68,12 @@ body { font-family: Arial, sans-serif; background: #fff; }
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0; /* ← суцільна висота */
+  bottom: 0;
   width: 220px;
   background: #afe5f6;
   padding: 15px;
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow: auto;
 }
 .b4 ul { margin: 0; padding-left: 18px; }
 
@@ -74,9 +86,10 @@ body { font-family: Arial, sans-serif; background: #fff; }
   align-items: center;
   justify-content: flex-start;
   padding-left: 30px;
+  box-sizing: border-box;
 }
 
-/* Кнопка */
+/* Кнопка в підвалі */
 .y-box {
   background: #f3e1fc;
   padding: 12px 30px;
@@ -86,7 +99,7 @@ body { font-family: Arial, sans-serif; background: #fff; }
 }
 
 /* Зображення */
-img {
+img, .map-img {
   display: block;
   max-width: 100%;
   height: auto;
