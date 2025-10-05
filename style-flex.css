@@ -16,7 +16,6 @@ body { font-family: Arial, sans-serif; background: #fff; }
   align-items: center;
   height: 120px;
   padding: 0 20px;
-  flex: 0 0 auto;
 }
 
 .menu a {
@@ -37,10 +36,9 @@ body { font-family: Arial, sans-serif; background: #fff; }
 
 /* Основна частина */
 .main-content {
-  flex: 1 1 auto;
+  flex: 1;
   display: flex;
   align-items: stretch;
-  min-height: calc(100vh - 200px); /* 120 header + 80 footer */
 }
 
 /* Ліва колонка */
@@ -49,46 +47,39 @@ body { font-family: Arial, sans-serif; background: #fff; }
   display: flex;
   flex-direction: column;
 }
-.b2 { background: #afe5f6; padding: 20px; flex: 1; }
-.b5 { background: #f7a8e8; padding: 20px; flex: 1; }
+.b2, .b5 { padding: 15px; flex: 1; }
+.b2 { background: #afe5f6; }
+.b5 { background: #f7a8e8; }
 
 /* Центральний блок */
 .b3 {
-  flex: 1 1 auto;
+  flex: 1;
   background: #fff;
   padding: 20px;
-  min-height: calc(100vh - 200px);
-  box-sizing: border-box;
-  overflow: auto;
-  border: none; /* прибираємо чорні лінії */
 }
 
 /* Права колонка */
 .b4 {
   width: 220px;
-  background: #afe5f6; /* як у Grid */
-  padding: 20px;
-  box-sizing: border-box;
+  background: #afe5f6;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-
-/* Списки у правій колонці */
 .b4 ul { margin: 0; padding-left: 18px; }
 
 /* Підвал */
 .b6 {
   background: #d299ef;
-  flex: 0 0 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 30px;
-  box-sizing: border-box;
 }
 
-/* Кнопка в підвалі */
+/* Кнопка */
 .y-box {
   background: #f3e1fc;
   padding: 12px 30px;
@@ -102,11 +93,5 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 20px 0;
-}
-.map-img {
-  width: 100%;
-  height: auto;
-  display: block;
   margin: 20px auto;
 }
