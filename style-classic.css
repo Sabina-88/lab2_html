@@ -29,7 +29,7 @@ body{font-family:Arial, Helvetica, sans-serif;background:#fff}
 .b2,.b5{
   padding:20px;
   box-sizing:border-box;
-  min-height:calc((100vh - 200px) / 2); 
+  min-height:calc((100vh - 200px) / 2);
 }
 @media (max-height:600px){
   .b2,.b5{min-height:180px}
@@ -39,23 +39,23 @@ body{font-family:Arial, Helvetica, sans-serif;background:#fff}
 
 /* центральний блок */
 .b3{
-  margin:0 220px 0 180px;
+  margin:0 240px 0 180px;
   background:#fff;
   padding:20px;
   box-sizing:border-box;
   min-height:200px;
 }
 
-/* права колонка*/
+/* права колонка */
 .b4{
   position:absolute;
   top:0;
   right:0;
+  bottom:0;        
   width:220px;
   background:#afe5f6;
   padding:20px;
   box-sizing:border-box;
-  min-height:200px;
   overflow:auto;
 }
 .b4 ul{margin:0;padding-left:18px}
