@@ -9,7 +9,6 @@ body { font-family: Arial, sans-serif; background: #fff; }
   background: #d299ef;
   height: 120px;
   padding: 0 20px;
-  overflow: hidden;
 }
 .b1 nav { float: left; margin-top: 40px; }
 .menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
@@ -28,21 +27,21 @@ body { font-family: Arial, sans-serif; background: #fff; }
 /* Основна частина */
 .main-wrap {
   position: relative;
-  padding-right: 240px;
-  min-height: calc(100vh - 200px); /* щоб права колонка тягнулась */
+  padding-right: 220px;
+  min-height: calc(100vh - 200px);
 }
 
 /* Ліва колонка */
 .left { float: left; width: 180px; }
-.b2 { background: #afe5f6; padding: 20px; min-height: 200px; box-sizing: border-box; }
-.b5 { background: #f7a8e8; padding: 20px; margin-top: 10px; min-height: 200px; box-sizing: border-box; }
+.b2, .b5 { padding: 15px; box-sizing: border-box; }
+.b2 { background: #afe5f6; min-height: 200px; }
+.b5 { background: #f7a8e8; min-height: 200px; }
 
 /* Центральний блок */
 .b3 {
-  margin: 0 240px 0 200px;
+  margin: 0 220px 0 180px;
   background: #fff;
   padding: 20px;
-  min-height: 200px;
   box-sizing: border-box;
 }
 
@@ -51,15 +50,12 @@ body { font-family: Arial, sans-serif; background: #fff; }
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0; /* щоб тягнулась донизу */
+  bottom: 0;
   width: 220px;
-  background: #afe5f6; /* колір як у Grid */
-  padding: 20px;
+  background: #afe5f6;
+  padding: 15px;
   box-sizing: border-box;
-  overflow: auto;
 }
-
-/* Списки */
 .b4 ul { margin: 0; padding-left: 18px; }
 
 /* Підвал */
@@ -67,10 +63,10 @@ body { font-family: Arial, sans-serif; background: #fff; }
   clear: both;
   background: #d299ef;
   height: 80px;
-  padding-left: 30px;
   display: flex;
   align-items: center;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  padding-left: 30px;
 }
 
 /* Кнопка */
@@ -87,11 +83,5 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 20px 0;
-}
-.map-img {
-  width: 100%;
-  height: auto;
-  display: block;
   margin: 20px auto;
 }
