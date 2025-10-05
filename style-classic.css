@@ -52,7 +52,7 @@ body {
 /* Основна частина */
 .main-wrap {
   position: relative;
-  padding-right: 220px;
+  padding-right: 240px; /* 220px ширина правої + 20 запас */
   min-height: calc(100vh - 200px);
 }
 
@@ -62,14 +62,18 @@ body {
   width: 180px; 
   display: flex;
   flex-direction: column;
-  height: 100%;
   gap: 10px;
+  box-sizing: border-box;
 }
 
 .b2, .b5 { 
   padding: 15px; 
-  flex: 1; 
-  min-height: 250px;
+  box-sizing: border-box;
+  min-height: calc((100vh - 200px) / 2);
+}
+
+@media (max-height: 600px) {
+  .b2, .b5 { min-height: 180px; }
 }
 
 .b2 { background: #afe5f6; }
@@ -77,7 +81,7 @@ body {
 
 /* Центральний блок */
 .b3 {
-  margin: 0 220px 0 180px;
+  margin: 0 240px 0 180px;
   background: #fff;
   padding: 20px;
   box-sizing: border-box;
