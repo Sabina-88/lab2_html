@@ -1,8 +1,23 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
-body { font-family: Arial, sans-serif; background: #fff; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
-.container { width: 100%; min-height: 100vh; }
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  font-family: Arial, sans-serif; 
+  background: #fff; 
+}
+
+/* Контейнер */
+.container { 
+  width: 100%; 
+  min-height: 100vh; 
+}
 
 /* Верхній блок */
 .b1 {
@@ -10,9 +25,19 @@ body { font-family: Arial, sans-serif; background: #fff; }
   height: 120px;
   padding: 0 20px;
 }
-.b1 nav { float: left; margin-top: 40px; }
-.menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
-.menu a:hover { text-decoration: underline; }
+.b1 nav { 
+  float: left; 
+  margin-top: 40px; 
+}
+.menu a { 
+  margin-right: 15px; 
+  text-decoration: none; 
+  color: #000; 
+  font-weight: bold; 
+}
+.menu a:hover { 
+  text-decoration: underline; 
+}
 
 .logo-box {
   float: right;
@@ -38,8 +63,15 @@ body { font-family: Arial, sans-serif; background: #fff; }
   display: flex;
   flex-direction: column;
   height: 100%;
+  gap: 10px;
 }
-.b2, .b5 { padding: 15px; flex: 1; }
+
+.b2, .b5 { 
+  padding: 15px; 
+  flex: 1; 
+  min-height: 250px;
+}
+
 .b2 { background: #afe5f6; }
 .b5 { background: #f7a8e8; }
 
@@ -56,14 +88,17 @@ body { font-family: Arial, sans-serif; background: #fff; }
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0; /* ← суцільна висота */
+  bottom: 0;
   width: 220px;
   background: #afe5f6;
   padding: 15px;
   box-sizing: border-box;
   overflow-y: auto;
 }
-.b4 ul { margin: 0; padding-left: 18px; }
+.b4 ul { 
+  margin: 0; 
+  padding-left: 18px; 
+}
 
 /* Підвал */
 .b6 {
@@ -76,7 +111,6 @@ body { font-family: Arial, sans-serif; background: #fff; }
   padding-left: 30px;
 }
 
-/* Кнопка */
 .y-box {
   background: #f3e1fc;
   padding: 12px 30px;
