@@ -1,3 +1,4 @@
+/* Скидання стилів */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,24 +10,25 @@ body {
   background: #fff;
 }
 
+/* Контейнер у класичній верстці */
 .container {
+  position: relative;
   width: 100%;
   min-height: 100vh;
 }
 
-.block {
-  padding: 10px;
-  overflow-wrap: break-word;
-}
-
-/* Верхній блок 1 */
+/* --- Верхній блок (1) --- */
 .b1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
   background: #d299ef;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  height: 120px;
 }
 
 .menu a {
@@ -48,73 +50,87 @@ body {
   font-size: 24px;
 }
 
+/* --- Ліва колонка виправлена --- */
 .left {
-  float: left;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  bottom: 80px; /* щоб не заходила на підвал */
   width: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
-.b2 {
-  background: #afe5f6;
-  min-height: 250px;
-}
-.b5 {
-  background: #f7a8e8;
-  min-height: 250px;
-  margin-top: 10px;
+.left .b2,
+.left .b5 {
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
 }
 
+.left .b2 { background: #afe5f6; }
+.left .b5 { background: #f7a8e8; }
+
+/* --- Центральний блок (3) --- */
 .b3 {
-  margin-left: 180px;
-  margin-right: 220px;
+  position: absolute;
+  top: 120px;
+  left: 180px;
+  right: 220px;
+  bottom: 80px;
   background: #ffffff;
   padding: 15px;
-  min-height: 500px;
-  overflow: visible;
+  overflow: auto;
 }
 
 .b3 h2 {
   margin-top: 25px;
   margin-bottom: 10px;
 }
+
 .b3 p {
   margin-bottom: 15px;
 }
-.b3 ol,
-.b3 ul {
+
+.b3 ol, .b3 ul {
   margin-left: 20px;
   margin-bottom: 15px;
 }
 
-/* Права колонка */
+/* --- Права колонка (4) --- */
 .b4 {
-  float: right;
+  position: absolute;
+  top: 120px;
+  right: 0;
+  bottom: 80px; /* тепер не перекривається футером */
   width: 220px;
   background: #afe5f6;
   padding: 10px;
-  min-height: 500px;
+  overflow: auto;
 }
 
-.b4 ul,
-.b4 ol {
+.b4 ul, .b4 ol {
   margin: 0;
   padding-left: 20px;
   list-style-type: inside;
 }
 
-/* Підвал */
+/* --- Нижній блок (6) --- */
 .b6 {
-  clear: both;
-  background: #d299ef;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 80px;
-  position: relative;
+  background: #d299ef;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .y-box {
   position: absolute;
-  left: 20px;
+  left: 200px;
   background: #f3e1fc;
   color: #000;
   padding: 15px 40px;
@@ -123,7 +139,7 @@ body {
   font-size: 24px;
 }
 
-/* ЗОБРАЖЕННЯ */
+/* --- Зображення --- */
 img {
   display: block;
   margin: 20px auto;
@@ -131,7 +147,7 @@ img {
   max-width: 100%;
 }
 
-/* Колаж */
+/* --- Фото в колажі --- */
 .map-img {
   max-width: 1500px;
   width: 100%;
@@ -140,20 +156,21 @@ img {
   margin: 20px auto;
 }
 
-/* Фото на сторінці 4 */
+/* --- Фото для сторінки 4 --- */
 .movie-images {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
 }
+
 .movie-images img {
   max-width: 200px;
   height: auto;
   border-radius: 5px;
 }
 
-/* Адаптивність */
+/* --- Адаптивність --- */
 @media (max-width: 600px) {
   .movie-images {
     flex-direction: column;
