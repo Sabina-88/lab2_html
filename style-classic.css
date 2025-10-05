@@ -1,179 +1,109 @@
-/* Скидання стилів */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* style-classic.css (замінити повністю) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { font-family: Arial, sans-serif; background: #fff; }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-}
+.container { width: 100%; min-height: 100vh; }
 
-/* Контейнер у класичній верстці */
-.container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-}
-
-/* --- Верхній блок (1) --- */
+/* Верхній блок */
 .b1 {
+  background: #d299ef;
+  height: 120px;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.b1 nav { float: left; margin-top: 40px; }
+.menu a { margin-right: 15px; text-decoration: none; color: #000; font-weight: bold; }
+.menu a:hover { text-decoration: underline; }
+
+.logo-box {
+  float: right;
+  margin-top: 20px;
+  background: #f3e1fc;
+  padding: 15px 40px;
+  border: 2px solid #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Основна частина: враховує header+footer */
+.main-wrap {
+  position: relative;
+  padding-right: 220px; /* місце для правої колонки */
+  min-height: calc(100vh - 200px); /* 120 + 80 */
+}
+
+/* Ліва колонка: абсолютно всередині main-wrap, займає повну висоту main-wrap */
+.left {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 120px;
-  background: #d299ef;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.menu a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-.menu a:hover {
-  text-decoration: underline;
-}
-
-.logo-box {
-  background: #f3e1fc;
-  color: #000;
-  padding: 15px 40px;
-  border: 2px solid #000;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-/* --- Ліва колонка виправлена --- */
-.left {
-  position: absolute;
-  top: 120px;
-  left: 0;
-  bottom: 80px; /* щоб не заходила на підвал */
+  bottom: 0;
   width: 180px;
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
+/* Розбиваємо ліву колонку на два рівних по висоті блока (без flex) */
 .left .b2,
 .left .b5 {
-  flex: 1;
-  padding: 10px;
-  overflow: auto;
-}
-
-.left .b2 { background: #afe5f6; }
-.left .b5 { background: #f7a8e8; }
-
-/* --- Центральний блок (3) --- */
-.b3 {
-  position: absolute;
-  top: 120px;
-  left: 180px;
-  right: 220px;
-  bottom: 80px;
-  background: #ffffff;
+  box-sizing: border-box;
+  height: 50%;
   padding: 15px;
   overflow: auto;
 }
+.left .b2 { background: #afe5f6; }
+.left .b5 { background: #f7a8e8; }
 
-.b3 h2 {
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.b3 p {
-  margin-bottom: 15px;
-}
-
-.b3 ol, .b3 ul {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-/* --- Права колонка (4) --- */
-.b4 {
-  position: absolute;
-  top: 120px;
-  right: 0;
-  bottom: 80px; /* тепер не перекривається футером */
-  width: 220px;
-  background: #afe5f6;
-  padding: 10px;
+/* Центральний блок: відступи під ліву і праву колонки */
+.b3 {
+  margin: 0 220px 0 180px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100%; /* займе висоту контенту */
   overflow: auto;
 }
 
-.b4 ul, .b4 ol {
-  margin: 0;
-  padding-left: 20px;
-  list-style-type: inside;
-}
-
-/* --- Нижній блок (6) --- */
-.b6 {
+/* Права колонка: абсолютна, тягнеться зверху донизу main-wrap */
+.b4 {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 0;
   right: 0;
-  height: 80px;
+  bottom: 0;
+  width: 220px;
+  background: #afe5f6;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.b4 ul { margin: 0; padding-left: 18px; }
+
+/* Підвал */
+.b6 {
+  clear: both;
   background: #d299ef;
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
+/* Кнопка в підвалі */
 .y-box {
-  position: absolute;
-  left: 200px;
   background: #f3e1fc;
-  color: #000;
-  padding: 15px 40px;
+  padding: 12px 30px;
   border: 2px solid #000;
+  font-size: 20px;
   font-weight: bold;
-  font-size: 24px;
 }
 
-/* --- Зображення --- */
-img {
+/* Зображення */
+img, .map-img {
   display: block;
-  margin: 20px auto;
-  height: auto;
   max-width: 100%;
-}
-
-/* --- Фото в колажі --- */
-.map-img {
-  max-width: 1500px;
-  width: 100%;
   height: auto;
-  display: block;
   margin: 20px auto;
-}
-
-/* --- Фото для сторінки 4 --- */
-.movie-images {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.movie-images img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* --- Адаптивність --- */
-@media (max-width: 600px) {
-  .movie-images {
-    flex-direction: column;
-    align-items: center;
-  }
 }
